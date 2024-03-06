@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <script src="codebase/webix.js" type="text/javascript" charset="utf-8"></script>
+        <link href="codebase/skins/flat.css" rel="stylesheet" type="text/css">
+        <link href="css/custom.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <script>
+            webix.ready(function(){
+                webix.ui({
+                    "rows": [
+                        {
+                            "css": "webix_dark",
+                            "view": "toolbar",
+                            "cols": [
+                                { "view": "template", "borderless": 1 },
+                                { "template": "Image", "view": "template" },
+                                { "label": "Software", "view": "button", "height": 0 },
+                                { "label": "Pricing", "view": "button", "height": 0 },
+                                { "label": "Resources", "view": "button", "height": 0 },
+                                { "view": "template", "borderless": 1 },
+                                { "view": "button", "label": "Get a demo", "autowidth": true, "css": "custom_red_button", "borderless": 1 },
+                                { "label": "Get started free", "view": "button", "height": 0, "css": "custom_red_button", "borderless": 1 },
+                                { "view": "template", "borderless": 1 }
+                            ]
+                        },
+                        { "view": "template", "borderless": 1, "gravity": 0.3,  "css": "tan_background" },
+                        {
+                            "cols": [
+                                { "view": "template", "borderless": 1,  "css": "tan_background" },
+                                {
+                                    "rows": [
+                                        { "view": "template", "template": "HUBSPOT CUSTOMER PLATFORM", "borderless": 1,  "css": "tan_background" },
+                                        { "view": "template", "template": "Grow Better With HubSpot", "borderless": 1,  "css": "tan_background" },
+                                        {
+                                            "view": "template",
+                                            "template": "Software that's powerful, not overpowering. Seamlessly connect your data, teams, and customers on one customer platform that grows with your business.", "borderless": 1,  "css": "tan_background"
+                                        },
+                                        {
+                                            "height": 48,
+                                            "cols": [
+                                                { "label": "Get a demo", "view": "button", "height": 0, "borderless": 1, "css": "custom_red_button" },
+                                                { "label": "Get started free", "view": "button", "height": 48, "borderless": 1,  "css": "custom_white_button" }
+                                            ]
+                                        },
+                                        { "template": "Get a demo of our premium software, or get started with free tools.", "view": "template", "borderless": 1,  "css": "tan_background" }
+                                    ]
+                                },
+                                { "view": "template", "template": "Image", "borderless": 1,  "css": "tan_background" },
+                                { "view": "template", "borderless": 1,  "css": "tan_background" }
+                            ]
+                        },
+                        { "view": "template", "role": "placeholder", "borderless": 1,  "css": "tan_background"  },
+                        { "view": "template", "template": "194,000+ customers in over 120 countries grow their businesses with HubSpot" },
+                        { "view": "template", "template": "Carousel", "role": "placeholder" }
+                    ]
+                });
+            })
+        </script>
+    </body>
+</html>

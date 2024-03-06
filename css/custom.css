@@ -1,0 +1,13 @@
+.custom_red_button .webix_button {
+    background-color: #ff5c35;
+    color: #ffffff;
+  }
+
+.custom_white_button .webix_button {
+    background-color: #ffffff;
+    color: #ff5c35;
+  }
+
+.tan_background {
+    background-color: #FEF4EA;
+}
