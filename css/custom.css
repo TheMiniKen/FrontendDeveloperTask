@@ -1,12 +1,5 @@
 @font-face {
     font-family: LexendDeca;
-    src: url(fonts/LexendDeca-Light.ttf);
-    font-weight: light;
-    color: #213343;
-  }
-
-@font-face {
-    font-family: LexendDeca;
     src: url(fonts/LexendDeca-Medium.ttf);
     font-weight: medium;
     color: #213343;
@@ -20,23 +13,59 @@
   }
 
 @font-face {
+    font-family: LexendDeca;
+    src: url(fonts/LexendDeca-Light.ttf);
+    font-weight: Light;
+    color: #213343;
+  }
+
+@font-face {
     font-family: Queens;
     src: url(fonts/QueensTrial-Medium.ttf);
     font-weight: Medium;  
 }
 
+.webix_el_box {
+    padding: 0px
+}
+
 .custom_red_button .webix_button {
     background-color: #ff5c35;
     color: #ffffff;
-  }
+    border-color: #ff5c35;
+    font-family:LexendDeca;
+}
+
+.custom_red_button .webix_button:hover {
+    background-color: #B3361D;
+    color: #ffffff;
+    border-color: #B3361D;
+    font-family:LexendDeca;
+}
 
 .custom_white_button .webix_button {
     background-color: #ffffff;
     color: #ff5c35;
-  }
+    border-color: #ff5c35;
+    font-family:LexendDeca;
+    border-width: 3px;
+}
+
+.custom_white_button .webix_button:hover {
+    background-color: #ffebe6;
+    color: #ff5c35;
+    border-color: #ff5c35;
+    font-family:LexendDeca;
+    border-width: 3px;
+}
 
 .tan_background {
     background-color: #FEF4EA;
+    color: #213343; 
+}
+
+.white_background {
+    background-color: #ffffff;
     color: #213343; 
 }
 
