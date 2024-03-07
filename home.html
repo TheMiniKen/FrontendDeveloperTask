@@ -70,7 +70,82 @@
                                     },
                                     { "view": "template", "borderless": 1, "height": 100,  "css": "tan_background" },
                                     { "view": "template", "borderless": 1, "template": "<p style='font-family:LexendDeca; font-weight:bold; text-align: center;'>194,000+ customers in over 120 countries grow their businesses with HubSpot</p>", "height": 100, "css": "white_background" },
-                                    { "view": "template", "template": "Carousel", "role": "placeholder" }
+                                    { "cols":[
+                                        { "view": "template", "borderless": 1, "width": 200,  },
+                                        {
+                                            view:"carousel",
+                                            borderless: 1,
+                                            css:"webix_dark",
+                                            height: 200,
+                                            yCount: 5, 
+                                            cols:[
+                                                { "cols":[
+                                                    { "view": "template", "borderless": 1, "width": 50,  },
+                                                    { css: "carousel_image", template:img, data:{src:"images/carousel/casio.png"}, "borderless": 1,  },
+                                                    { css: "carousel_image", template:img, data:{src:"images/carousel/Doordash.png"}, "borderless": 1 },
+                                                    { css: "carousel_image", template:img, data:{src:"images/carousel/eventbrite.png"}, "borderless": 1 },
+                                                    { css: "carousel_image", template:img, data:{src:"images/carousel/Kahoot.png"}, "borderless": 1 },
+                                                ]},
+                                                { "cols":[
+                                                    { "view": "template", "borderless": 1, "width": 50,  },
+                                                    { css: "carousel_image", template:img, data:{src:"images/carousel/MCSaatchiGroup.png"}, "borderless": 1 },
+                                                    { css: "carousel_image", template:img, data:{src:"images/carousel/reddit.png"}, "borderless": 1 },
+                                                    { css: "carousel_image", template:img, data:{src:"images/carousel/Smeg.png"}, "borderless": 1 },
+                                                    { css: "carousel_image", template:img, data:{src:"images/carousel/TheMotleyFool.png"}, "borderless": 1 },
+                                                ]},
+                                                { "cols":[
+                                                    { "view": "template", "borderless": 1, "width": 50,  },
+                                                    { css: "carousel_image", template:img, data:{src:"images/carousel/tumblr.png"}, "borderless": 1 },
+                                                    { css: "carousel_image", template:img, data:{src:"images/carousel/Unipart.png"}, "borderless": 1 },
+                                                    { css: "carousel_image", template:img, data:{src:"images/carousel/weightwatchers.png"}, "borderless": 1 },
+                                                    { css: "carousel_image", template:img, data:{src:"images/carousel/wwf.png"}, "borderless": 1 },
+                                                ]},
+                                                    
+
+
+                                            ],
+                                            navigation:{
+                                                type: "side"
+                                            }
+                                        },
+                                        { "view": "template", "borderless": 1, "width": 200,  },
+                                    ]},
+                                    { "view": "template", "borderless": 1, "height": 100, "css": "blue_background" },
+                                    { "cols": [
+                                        { "view": "template", "borderless": 1, "width": 220, "css": "blue_background" },
+                                        { "view": "template", "template":"<img src='images/homepage_image_2.png' height='100%'>", "borderless": 1, "css": "blue_background" },
+                                        { "view": "template", "borderless": 1, "width": 10, "css": "blue_background" },
+                                        {
+                                            "rows": [
+                                                { "view": "template", "template": "<p style='font-family:LexendDeca; font-weight:bold; font-size:40px; margin: 0px'>What is HubSpot?</p>", "borderless": 1, "height": 60, "css": "blue_background" },
+                                                {
+                                                    "view": "template",
+                                                    "borderless": 1,
+                                                    "template": "<p style='font-family:LexendDeca; margin: 0px'>HubSpot is a customer platform with all the software, integrations, and resources you need to connect your marketing, sales, content management, and customer service. HubSpot's connected platform enables you to grow your business faster by focusing on what matters most: your customers.</p>",
+                                                    "css": "blue_background",
+                                                    "height": 120,
+                                                },
+                                                {
+                                                    "view": "template",
+                                                    "borderless": 1,
+                                                    "template": "<p style='font-family:LexendDeca; margin: 0px'>Get a demo to learn about our premium software, or get started with our full suite of free tools and upgrade as you grow.</p>",
+                                                    "css": "blue_background",
+                                                    "height": 60,
+                                                },
+                                                {
+                                                    "height": 50,
+                                                    "cols": [
+                                                        { "label": "<b style='font-size: 20px'>Get a demo</b>", "view": "button", "borderless": 1, "css": "custom_red_button" },
+                                                        { "view": "template", "borderless": 1, "width": 40, "css": "blue_background"},
+                                                        { "label": "<b style='font-size: 20px'>Get started free</b>", "view": "button", "borderless": 1,  "css": "custom_white_button" },
+                                                        { "view": "template", "borderless": 1, "width": 60, "css": "blue_background"},
+                                                    ]
+                                                },
+                                            ]
+                                        },
+                                        { "view": "template", "borderless": 1, "width": 220, "css": "blue_background" }
+                                    ]},
+                                    { "view": "template", "borderless": 1, "height": 100, "css": "blue_background" },
                                 ]
                             }
                         }
@@ -78,6 +153,10 @@
                     ]
                 });
             })
+
+            function img(obj){
+                return '<img src="'+obj.src+'" width="155px"   class="content" ondragstart="return false"/>'
+            }
         </script>
     </body>
 </html>

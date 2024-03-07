@@ -84,3 +84,13 @@
 .custom_toolbar {
     background-color: #ffffff;
 }
+
+.carousel_image .webix_template{
+    position: static;
+    padding: 50px;
+}
+
+.blue_background {
+    background-color: #F6F9FC;
+    color: #213343;
+}
