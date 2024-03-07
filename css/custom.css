@@ -43,6 +43,13 @@
     font-family:LexendDeca;
 }
 
+.custom_red_button .webix_button:focus {
+    background-color: #B3361D;
+    color: #ffffff;
+    border-color: #B3361D;
+    font-family:LexendDeca;
+}
+
 .custom_white_button .webix_button {
     background-color: #ffffff;
     color: #ff5c35;
@@ -59,6 +66,60 @@
     border-width: 3px;
 }
 
+.custom_white_button .webix_button:focus {
+    background-color: #ffebe6;
+    color: #ff5c35;
+    border-color: #ff5c35;
+    font-family:LexendDeca;
+    border-width: 3px;
+}
+
+.menu_button .webix_button {
+    background-color: #ffffff;
+    color: #005fa3;
+    border-color: #eaf0f6;
+    border-radius: 1px;
+    font-family:LexendDeca;
+}
+
+.menu_button .webix_button:hover {
+    background-color: #ffffff;
+    color: #005fa3;
+    border-color: #eaf0f6;
+    border-radius: 1px;
+    font-family:LexendDeca;
+    text-decoration: underline;
+}
+
+.menu_secondary_button .webix_button {
+    background-color: #F6F9FC;
+    color: #005fa3;
+    border-color: #eaf0f6;
+    border-radius: 1px;
+    font-family:LexendDeca;
+    font-size:14px;
+}
+
+.menu_secondary_button .webix_button:hover {
+    background-color: #F6F9FC;
+    color: #005fa3;
+    border-color: #eaf0f6;
+    border-radius: 1px;
+    font-family:LexendDeca;
+    font-size:14px;
+    box-shadow: 0px 50px 50px #213343;
+}
+
+.menu_secondary_button .webix_button:focus {
+    background-color: #F6F9FC;
+    color: #005fa3;
+    border-color: #eaf0f6;
+    border-radius: 1px;
+    font-family:LexendDeca;
+    font-size:14px;
+    box-shadow: 0px 50px 50px #213343;
+}
+
 .tan_background {
     background-color: #FEF4EA;
     color: #213343; 
@@ -72,14 +133,20 @@
 .clear_button .webix_button {
     background-color: #ffffff;
     color:#2E475D;
-    font-family:LexendDeca;
-    
+    font-family:LexendDeca;    
 }
 
 .clear_button .webix_button:hover {
     background-color: #ffffff;
     text-decoration: underline;
-  }
+    color: #005fa3;
+}
+
+.clear_button .webix_button:focus {
+    background-color: #ffffff;
+    text-decoration: underline;
+    color: #005fa3;
+}
 
 .custom_toolbar {
     background-color: #ffffff;

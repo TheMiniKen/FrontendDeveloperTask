@@ -18,9 +18,9 @@
                                 {"cols": [
                                     { "view": "template", "borderless": 1, "width": 200 },
                                     { "template": "Image", "borderless": 1, "template":"<img src='images/logo.svg' width='100' height='30'>" },
-                                    { "label": "Software", "view": "button", "height": 0, "css": "clear_button" },
-                                    { "label": "Pricing", "view": "button", "height": 0, "css": "clear_button" },
-                                    { "label": "Resources", "view": "button", "height": 0, "css": "clear_button" },
+                                    { "label": "<b>Software</b>", "view": "button", "height": 0, "css": "clear_button", "popup":"menu_popup" },
+                                    { "label": "<b>Pricing</b>", "view": "button", "height": 0, "css": "clear_button" },
+                                    { "label": "<b>Resources</b>", "view": "button", "height": 0, "css": "clear_button" },
                                     { "view": "template", "borderless": 1 },
                                     { "view": "button", "label": "<b>Get a demo</b>", "autowidth": true, "css": "custom_red_button" },
                                     { "view": "template", "borderless": 1, "width": 10},
@@ -146,12 +146,186 @@
                                         { "view": "template", "borderless": 1, "width": 220, "css": "blue_background" }
                                     ]},
                                     { "view": "template", "borderless": 1, "height": 100, "css": "blue_background" },
+                                    { "view": "template", "borderless": 1, "height": 50, "css": "tan_background" },
+                                    { "cols": [
+                                        { "view": "template", "borderless": 1,  "css": "tan_background" },
+                                        {
+                                            "rows": [
+                                                { "view": "template", "template":"<img src='images/homepage_image_3.png' height='width%'>", "borderless": 1, "css": "tan_background", "height":500, "width":900 },
+                                                { "view": "template", "template": "<h1 style='font-family:LexendDeca; font-weight:bold; font-size:32px; margin: 0px; text-align: center'>Your whole front office. One customer platform.</h1>", "borderless": 1, "height": 100, "css": "tan_background" },
+                                                {
+                                                    "view": "template",
+                                                    "template": "<p style='font-family:LexendDeca; font-size: 18px; margin: 0px'>HubSpot's customer platform is made up of six core products for marketing, sales, customer service, content management, operations, and commerce. Each product in the platform is connected to the same underlying CRM database, giving you incredible insight into every contact at each stage in their customer journey. Although our products are powerful on their own, the real magic happens when you use them together.</p>",
+                                                    "height": 160,
+                                                    "css": "tan_background",
+                                                    "borderless": 1,
+                                                },
+                                                {
+                                                    "height": 50,
+                                                    "cols": [
+                                                        { "view": "template", "borderless": 1, "css": "tan_background" },
+                                                        { "label": "<b style='font-size: 20px'>Get a demo</b>", "view": "button", "borderless": 1, "css": "custom_red_button" },
+                                                        { "view": "template", "borderless": 1, "width": 40, "css": "tan_background"},
+                                                        { "label": "<b style='font-size: 20px'>Get started free</b>", "view": "button", "borderless": 1, "gravity": 1.2, "css": "custom_white_button" },
+                                                        { "view": "template", "borderless": 1, "css": "tan_background" },
+                                                    ]
+                                                },
+                                                { "view": "template", "borderless": 1, "height": 50, "css": "tan_background" },
+                                            ]
+                                        },
+                                        { "view": "template", "borderless": 1, "css": "tan_background" },
+                                    ]},
                                 ]
                             }
                         }
 
                     ]
                 });
+
+                webix.ui({
+                    view:"popup", 
+                    width: 1080, height:500,
+                    top:72, left: 200,
+                    padding: 0,
+                    id: "menu_popup",
+                    body: {"rows": [
+                            {
+                                "cols": [
+                                    { "view": "template", "borderless": 1, "width": 100, "css": "blue_background" },
+                                    {
+                                        "rows": [
+                                        { "view": "template", "borderless": 1, "css": "blue_background", "gravity": 0.2 },
+                                            { "view": "template", "template": "<p style='font-family:LexendDeca; font-weight:bold; margin: 0px; text-align: center'>The HubSpot Customer Platform</p>", "borderless": 1, "css": "blue_background" },
+                                            { "view": "template", "template": "<p style='font-family:LexendDeca; margin: 0px; text-align: center'>All of HubSpot's marketing, sales, customer service, CMS, operations, and commerce software on one platform.</p>", "borderless": 1, "css": "blue_background" },
+                                            {   
+                                                "height": 50,
+                                                "cols": [
+                                                    { "view": "template", "borderless": 1, "css": "blue_background", "gravity": 0.2 },
+                                                    { "label": "<b style='font-size: 14px'>Free HubSpot CRM <span>&#8594;</span></b>", "view": "button", "borderless": 1, "css": "menu_button" },
+                                                    { "view": "template", "borderless": 1, "css": "blue_background", "gravity": 0.1 },
+                                                    { "label": "<b style='font-size: 14px'>Overview of all products <span>&#8594;</span></b>", "view": "button", "borderless": 1, "css": "menu_button" },
+                                                    { "view": "template", "borderless": 1, "css": "blue_background", "gravity": 0.2 }
+                                                ]
+                                            },
+                                            { "view": "template", "borderless": 1, "css": "blue_background", "gravity": 0.2 },
+                                            {
+                                                "height": 100,
+                                                "cols": [
+                                                    {
+                                                        "cols": [ //place an on click function on this column to turn this section into a link
+                                                            { "view": "template", "template": "<img src='images/MarketingHub.svg' width='24' height='24'>", "borderless": 1, "width": 40 },
+                                                            {
+                                                                "rows": [
+                                                                    { "view": "template", "borderless": 1, "template": "<p style='font-family:LexendDeca; font-weight:bold; font-size:18px; margin: 0px; color: #213343'>Marketing Hub" },
+                                                                    { "view": "template", "borderless": 1, "template": "<p style='font-family:LexendDeca; font-size:14px; margin: 0px; color: #213343'>Marketing automation software</p>" },
+                                                                    { "view": "template", "borderless": 1, "template": "<b style='font-family:LexendDeca; font-size:14px; margin: 0px; color: #005fa3'>Free and premium plans <span>&#8594;</span></b>" },
+                                                                    { "view": "template", "borderless": 1, "css": "blue_background", "gravity": 0.1 },
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    { "view": "template", "borderless": 1, "css": "blue_background", "gravity": 0.1 },
+                                                    {
+                                                        "cols": [ //place an on click function on this column to turn this section into a link
+                                                            { "view": "template", "template": "<img src='images/MarketingHub.svg' width='24' height='24'>", "borderless": 1, "width": 40 },
+                                                            {
+                                                                "rows": [
+                                                                    { "view": "template", "borderless": 1, "template": "<p style='font-family:LexendDeca; font-weight:bold; font-size:18px; margin: 0px; color: #213343'>Sales Hub" },
+                                                                    { "view": "template", "borderless": 1, "template": "<p style='font-family:LexendDeca; font-size:14px; margin: 0px; color: #213343'>Sales CRM software</p>" },
+                                                                    { "view": "template", "borderless": 1, "template": "<b style='font-family:LexendDeca; font-size:14px; margin: 0px; color: #005fa3'>Free and premium plans <span>&#8594;</span></b>" },
+                                                                    { "view": "template", "borderless": 1, "css": "blue_background", "gravity": 0.1 },
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    { "view": "template", "borderless": 1, "css": "blue_background", "gravity": 0.1 },
+                                                    {
+                                                        "cols": [ //place an on click function on this column to turn this section into a link
+                                                            { "view": "template", "template": "<img src='images/ServiceHub.svg' width='24' height='24'>", "borderless": 1, "width": 40 },
+                                                            {
+                                                                "rows": [
+                                                                    { "view": "template", "borderless": 1, "template": "<p style='font-family:LexendDeca; font-weight:bold; font-size:18px; margin: 0px; color: #213343'>Service Hub" },
+                                                                    { "view": "template", "borderless": 1, "template": "<p style='font-family:LexendDeca; font-size:14px; margin: 0px; color: #213343'>Customer service software</p>" },
+                                                                    { "view": "template", "borderless": 1, "template": "<b style='font-family:LexendDeca; font-size:14px; margin: 0px; color: #005fa3'>Free and premium plans <span>&#8594;</span></b>" },
+                                                                    { "view": "template", "borderless": 1, "css": "blue_background", "gravity": 0.1 },
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                ]
+                                            },
+                                            { "view": "template", "borderless": 1, "css": "blue_background", "gravity": 0.2 },
+                                            {
+                                                "height": 100,
+                                                "cols": [
+                                                {
+                                                        "cols": [ //place an on click function on this column to turn this section into a link
+                                                            { "view": "template", "template": "<img src='images/CMSHub.svg' width='24' height='24'>", "borderless": 1, "width": 40 },
+                                                            {
+                                                                "rows": [
+                                                                    { "view": "template", "borderless": 1, "template": "<p style='font-family:LexendDeca; font-weight:bold; font-size:18px; margin: 0px; color: #213343'>CMS Hub" },
+                                                                    { "view": "template", "borderless": 1, "template": "<p style='font-family:LexendDeca; font-size:14px; margin: 0px; color: #213343'>Content management software</p>" },
+                                                                    { "view": "template", "borderless": 1, "template": "<b style='font-family:LexendDeca; font-size:14px; margin: 0px; color: #005fa3'>Free and premium plans <span>&#8594;</span></b>" },
+                                                                    { "view": "template", "borderless": 1, "css": "blue_background", "gravity": 0.1 },
+                                                                ]
+                                                            }
+                                                        ]
+                                                },
+                                                { "view": "template", "borderless": 1, "css": "blue_background", "gravity": 0.1 },
+                                                {
+                                                        "cols": [ //place an on click function on this column to turn this section into a link
+                                                            { "view": "template", "template": "<img src='images/OperationsHub.svg' width='24' height='24'>", "borderless": 1, "width": 40 },
+                                                            {
+                                                                "rows": [
+                                                                    { "view": "template", "borderless": 1, "template": "<p style='font-family:LexendDeca; font-weight:bold; font-size:18px; margin: 0px; color: #213343'>Operations Hub" },
+                                                                    { "view": "template", "borderless": 1, "template": "<p style='font-family:LexendDeca; font-size:14px; margin: 0px; color: #213343'>Operations software</p>" },
+                                                                    { "view": "template", "borderless": 1, "template": "<b style='font-family:LexendDeca; font-size:14px; margin: 0px; color: #005fa3'>Free and premium plans <span>&#8594;</span></b>" },
+                                                                    { "view": "template", "borderless": 1, "css": "blue_background", "gravity": 0.1 },
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    { "view": "template", "borderless": 1, "css": "blue_background", "gravity": 0.1 },
+                                                    {
+                                                        "cols": [ //place an on click function on this column to turn this section into a link
+                                                            { "view": "template", "template": "<img src='images/MarketingHub.svg' width='24' height='24'>", "borderless": 1, "width": 40 },
+                                                            {
+                                                                "rows": [
+                                                                    { "view": "template", "borderless": 1, "template": "<p style='font-family:LexendDeca; font-weight:bold; font-size:18px; margin: 0px; color: #213343'>Commerce Hub" },
+                                                                    { "view": "template", "borderless": 1, "template": "<p style='font-family:LexendDeca; font-size:14px; margin: 0px; color: #213343'>B2B commerce software</p>" },
+                                                                    { "view": "template", "borderless": 1, "template": "<b style='font-family:LexendDeca; font-size:14px; margin: 0px; color: #005fa3'>Free and premium plans <span>&#8594;</span></b>" },
+                                                                    { "view": "template", "borderless": 1, "css": "blue_background", "gravity": 0.1 },
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },                                                    
+                                                ]
+                                            },
+                                            { "view": "template", "borderless": 1, "css": "blue_background", "gravity": 0.2 },
+                                        ]
+                                    },
+                                    { "view": "template", "borderless": 1, "width": 100, "css": "blue_background" }
+                                ]
+                            },
+                            {   "gravity": 0.3,
+                                "rows": [
+                                    { "view": "template", "borderless": 1, "gravity": 0.1, "css": "white_background" },
+                                    {
+                                        "cols": [
+                                            { "view": "template", "borderless": 1, "css": "white_background", "width": 100 },
+                                            { "label": "<p>HubSpot AI</p>", "view": "button", "css": "menu_secondary_button" },
+                                            { "view": "template", "borderless": 1, "gravity": 0.1, "css": "white_background", "width": 100 },
+                                            { "label": "<p>App Marketplace</p>", "view": "button", "css": "menu_secondary_button" },
+                                            { "view": "template", "borderless": 1, "css": "white_background", "width": 100 },
+                                        ]
+                                    },
+                                    { "view": "template", "borderless": 1, "gravity": 0.1, "css": "white_background" },
+                                ]
+                                
+                            }
+                        ],
+                    }
+                }).hide();
             })
 
             function img(obj){
