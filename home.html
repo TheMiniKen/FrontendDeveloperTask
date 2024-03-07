@@ -11,49 +11,67 @@
                 webix.ui({
                     "rows": [
                         {
-                            "css": "webix_dark",
+                            "css": "custom_toolbar",
                             "view": "toolbar",
-                            "cols": [
-                                { "view": "template", "borderless": 1 },
-                                { "template": "Image", "view": "template" },
-                                { "label": "Software", "view": "button", "height": 0 },
-                                { "label": "Pricing", "view": "button", "height": 0 },
-                                { "label": "Resources", "view": "button", "height": 0 },
-                                { "view": "template", "borderless": 1 },
-                                { "view": "button", "label": "Get a demo", "autowidth": true, "css": "custom_red_button", "borderless": 1 },
-                                { "label": "Get started free", "view": "button", "height": 0, "css": "custom_red_button", "borderless": 1 },
-                                { "view": "template", "borderless": 1 }
+                            "rows": [
+                                { "view": "template", "borderless": 1, "height":10},
+                                {"cols": [
+                                    { "view": "template", "borderless": 1, "width": 200 },
+                                    { "template": "Image", "borderless": 1, "template":"<img src='images/logo.svg' width='100' height='30'>" },
+                                    { "label": "Software", "view": "button", "height": 0, "css": "clear_button" },
+                                    { "label": "Pricing", "view": "button", "height": 0, "css": "clear_button" },
+                                    { "label": "Resources", "view": "button", "height": 0, "css": "clear_button" },
+                                    { "view": "template", "borderless": 1 },
+                                    { "view": "button", "label": "Get a demo", "autowidth": true, "css": "custom_red_button", "borderless": 1 },
+                                    { "label": "Get started free", "view": "button", "height": 0, "css": "custom_red_button", "borderless": 1 },
+                                    { "view": "template", "borderless": 1 }
+                                ]},
+                                { "view": "template", "borderless": 1, "height":10},
                             ]
                         },
-                        { "view": "template", "borderless": 1, "gravity": 0.3,  "css": "tan_background" },
                         {
-                            "cols": [
-                                { "view": "template", "borderless": 1,  "css": "tan_background" },
-                                {
-                                    "rows": [
-                                        { "view": "template", "template": "HUBSPOT CUSTOMER PLATFORM", "borderless": 1,  "css": "tan_background" },
-                                        { "view": "template", "template": "Grow Better With HubSpot", "borderless": 1,  "css": "tan_background" },
-                                        {
-                                            "view": "template",
-                                            "template": "Software that's powerful, not overpowering. Seamlessly connect your data, teams, and customers on one customer platform that grows with your business.", "borderless": 1,  "css": "tan_background"
-                                        },
-                                        {
-                                            "height": 48,
-                                            "cols": [
-                                                { "label": "Get a demo", "view": "button", "height": 0, "borderless": 1, "css": "custom_red_button" },
-                                                { "label": "Get started free", "view": "button", "height": 48, "borderless": 1,  "css": "custom_white_button" }
-                                            ]
-                                        },
-                                        { "template": "Get a demo of our premium software, or get started with free tools.", "view": "template", "borderless": 1,  "css": "tan_background" }
-                                    ]
-                                },
-                                { "view": "template", "template": "Image", "borderless": 1,  "css": "tan_background" },
-                                { "view": "template", "borderless": 1,  "css": "tan_background" }
-                            ]
-                        },
-                        { "view": "template", "role": "placeholder", "borderless": 1,  "css": "tan_background"  },
-                        { "view": "template", "template": "194,000+ customers in over 120 countries grow their businesses with HubSpot" },
-                        { "view": "template", "template": "Carousel", "role": "placeholder" }
+                            view:"scrollview",
+                            scroll:"y",
+                            height:900,
+                            width: 0,
+                            body:{
+                                "rows": [
+                                    { "view": "template", "borderless": 1, "gravity": 0.3,  "css": "tan_background" },
+                                    {
+                                        "cols": [
+                                            { "view": "template", "borderless": 1,  "css": "tan_background", "width": 200  },
+                                            {
+                                                "rows": [
+                                                    { "view": "template", "template": "<p style='font-family:LexendDeca; font-weight:bold'>HUBSPOT CUSTOMER PLATFORM</p>", "borderless": 1,  "css": "tan_background", "height": 50 },
+                                                    { "view": "template", "template": "<p style='font-family:Queens; font-size: 60px; margin: 0px'>Grow Better With HubSpot</p>", "borderless": 1,  "css": "tan_background", "height": 200 },
+                                                    {
+                                                        "view": "template",
+                                                        "template": "<p style='font-family:LexendDeca; margin: 0px'>Software that's powerful, not overpowering. Seamlessly connect your data, teams, and customers on one customer platform that grows with your business.</p>", 
+                                                        "borderless": 1,  
+                                                        "css": "tan_background",
+                                                        "height": 200,
+                                                    },
+                                                    {
+                                                        "height": 48,
+                                                        "cols": [
+                                                            { "label": "Get a demo", "view": "button", "height": 0, "borderless": 1, "css": "custom_red_button" },
+                                                            { "label": "Get started free", "view": "button", "height": 48, "borderless": 1,  "css": "custom_white_button" }
+                                                        ]
+                                                    },
+                                                    { "template": "<p style='font-family:LexendDeca'>Get a demo of our premium software, or get started with free tools.</p>", "view": "template", "borderless": 1,  "css": "tan_background" }
+                                                ]
+                                            },
+                                            { "view": "template", "template":"<img src='images/homepage_image.webp' width='100%'>", "borderless": 1, "css": "tan_background" },
+                                            { "view": "template", "borderless": 1,  "css": "tan_background", "width":50 }
+                                        ]
+                                    },
+                                    { "view": "template", "role": "placeholder", "borderless": 1,  "css": "tan_background"  },
+                                    { "view": "template", "template": "194,000+ customers in over 120 countries grow their businesses with HubSpot" },
+                                    { "view": "template", "template": "Carousel", "role": "placeholder" }
+                                ]
+                            }
+                        }
+
                     ]
                 });
             })
